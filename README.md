@@ -133,7 +133,7 @@ $ echo ${JAVA_HOME}
 /Users/bberman/.jenv/versions/11.0.2
 ```
 
-Yes! Observe that `JAVA_HOME` is set to a valid shim directory. Unlike the main repository's documentation we helpfully installed the `export` plugin, and we now have the most important `jenv` features covered.
+Yes! Observe that `JAVA_HOME` is set to a valid shim directory. Unlike the main repository's documentation we helpfully [installed the `export` plugin](#2.2-using-plugins), and we now have the most important `jenv` features covered.
 
 If you executed this commands inside your `$HOME` directory, you can now delete `.java-version`:
 
@@ -202,8 +202,35 @@ $ jenv versions
   openjdk64-11.0.2
   oracle64-1.8.0.202-ea
 ```
+#### 2.2 Using plugins
 
-#### 2.2 Other Workflows
+Enable the `export` plugin to export `JAVA_HOME`:
+
+```bash
+jenv enable-plugin export
+```
+
+Enable the `maven` plugin to ensure that jenv works properly with Maven(instead of using system JDK):
+```bash
+jenv enable-plugin maven
+```
+
+Enable the `gradle` plugin:
+```bash
+jenv enable-plugin gradle
+```
+
+Disable a certain plugin:
+```bash
+jenv disable-plugin <plugin-name>
+```
+
+Get all available plugins:
+```bash
+jenv plugins
+```
+
+#### 2.3 Other Workflows
 
 Please contribute your own using a pull request!
 
