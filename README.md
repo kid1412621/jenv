@@ -71,7 +71,7 @@ $ jenv doctor
 
 Observe that `jenv` is correctly loaded but Java is not yet installed.
 
-To make sure `JAVA_HOME` is set, make sure to enable the `export` plugin:
+To make sure `JAVA_HOME` is set, make sure to enable the `export` [plugin](#22-using-plugins):
 
 ```bash
 jenv enable-plugin export
@@ -133,7 +133,7 @@ $ echo ${JAVA_HOME}
 /Users/bberman/.jenv/versions/11.0.2
 ```
 
-Yes! Observe that `JAVA_HOME` is set to a valid shim directory. Unlike the main repository's documentation we helpfully [installed the `export` plugin](#2.2-using-plugins), and we now have the most important `jenv` features covered.
+Yes! Observe that `JAVA_HOME` is set to a valid shim directory. Unlike the main repository's documentation we helpfully installed the `export` plugin, and we now have the most important `jenv` features covered.
 
 If you executed this commands inside your `$HOME` directory, you can now delete `.java-version`:
 
